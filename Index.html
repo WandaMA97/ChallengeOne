@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador de Texto</title>
+        <linK rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Bungee+Spice&family=Concert+One&family=Dosis:wght@200..800&family=Handjet:wght@100..900&family=Honk&family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&family=Pixelify+Sans:wght@400..700&family=Protest+Riot&family=Workbench&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <main>
+            <div id="principal">
+                <h1 class="titulos">Bienvenidxs al encriptador de texto!</h1>
+                <p class="text-cuerpo">Protege tus mensajes con nuestra herramienta segura y fácil de usar.</p>
+                
+                <div class="div-txtArea">
+                    <label for="txt-usuario" class="text-cuerpo" id="label-txt">Agrega aquí lo que desees pasar por el programa de Encriptado</label>
+                    <textarea id="txtUsuario" class="text-input" placeholder="⚠No se permiten signos de puntuacion, numeros ni letras con acentos"></textarea>
+                </div>
+                
+                <div class="btn-div">
+                    <button type="button" onclick="btnEncriptar()" id="encriptador"> 
+                        <span>
+                            <ion-icon name="lock-closed" id="icono"></ion-icon> Encriptar
+                        </span>
+                    </button>
+                    <button type="button" onclick="btnDesencriptar()" id="desencriptador">
+                        <span>
+                            <ion-icon name="lock-open" id="icono"></ion-icon> Desencriptar
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div id="respuesta">
+                <textarea class="titulos txtRespuesta" id="text-respuestas" readonly></textarea>
+                <img id="robot1" class="robot" src="Imagenes/robot1.gif">
+
+                <img id="robot2" class="robot" src="Imagenes/robot2.gif">
+                <button type="button" onclick="copiar()" id="btnCopiar"> 
+                    <span>
+                        <ion-icon name="document-text-outline" id="icono"></ion-icon>Copiar
+                    </span>
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Reto para estudiantes por</p>
+            <img id="logo" src="Imagenes/Alura.png">
+        </footer>
+
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="app.js" defer></script>    </body>
+</html>
